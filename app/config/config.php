@@ -1,6 +1,5 @@
 <?php 
-define ('BASEURL', 'http://localhost/data/rpl2/public');
-
+define ('BASEURL', 'http://localhost/rpl2/public');
 //DB
 
 define('DB_HOST','localhost');
