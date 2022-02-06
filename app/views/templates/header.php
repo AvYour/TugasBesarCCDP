@@ -36,7 +36,7 @@
 					<a class="navbar-brand" href="<?= BASEURL ?>">Batik</a>
 					<div class="d-flex">
 						<a class="btn btn-outline-success" href="<?= BASEURL ?>/login">Login</a>
-						<a class="btn btn-outline-success" href="">Daftar</a>
+						<a class="btn btn-outline-success" href="<?= BASEURL ?>/login/register">Daftar</a>
 					</div>
 				</div>
 			</nav>

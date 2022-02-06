@@ -38,7 +38,7 @@
 		.body {
 			position: relative;
 			width: 720px;
-			height: 440px;
+			height: 500px;
 			margin: 20px auto;
 			border: 1px solid #dddd;
 			border-radius: 18px;
@@ -111,42 +111,56 @@
 			}
 		}
 	</style>
-<body>
+	<body>
 		<div class="content-wrapper">
 			<div class="row">
 				<div class="col-md-12 stretch-card">
 					<div class="card">
 						<div class="card-body">
 							<div class="row">
-                                <a href="<?= BASEURL?>"
+                                <a href="<?= BASEURL ?>"
                                     class="auth-link text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3"
                                     style="text-align: left; font-size: 18pt">
                                     Kembali
                                 </a>
 							<div class="container-fluid">
 								<div class="body d-md-flex align-items-center justify-content-between">
-									<div class="box-2 d-flex flex-column h-100">
-										<div class="mt-5 px-5">
-											<p class="mt-4 mb-5 h-1" style="text-align: center;">Log in</p>
+									<div class="box-2 d-flex flex-column h-150">
+										<div class="mt-3 px-5">
+											<p class=" mb-5 h-1" style="text-align: center;">Sign Up</p>
 											<form>
 												<div class="mb-3">
-													<input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+													<input type="username" class="form-control rounded-pill" id="exampleInputUsername" aria-describedby="Username" placeholder="Username">
 												</div>
 												<div class="mb-3">
 													<input type="password" class="form-control rounded-pill" id="exampleInputPassword1" placeholder="Password">
 												</div>
+												<p>Tanggal Lahir</p>
+												<div class="mb-3">
+													<input type="date" class="form-control rounded-pill" id="exampleInputDate" aria-describedby="date" placeholder="Date">
+												</div>
+								                <div class="col-6">
+													<p>Jenis Kelamin</p>
+													<div class="form-group">
+														<div class="form-check">
+															<label class="form-check-label">
+																<input type="radio" class="form-check-input" name="jk" id="jk" value="L">
+																Laki - Laki
+																<i class="input-helper"></i></label>
+														</div>
+														<div class="form-check">
+															<label class="form-check-label">
+																<input type="radio" class="form-check-input" name="jk" id="jk" value="P">
+																Perempuan
+																<i class="input-helper"></i></label>
+														</div>
+													</div>
+												</div>
 											</form>
 											<div class="d-flex flex-column">
-												<div class="mt-4" style="text-align: center;">
-													<div class="btn btn-primary rounded-pill" style="font-size: 16pt;">Login</div>
+												<div style="text-align: center;">
+													<div class="btn btn-primary rounded-pill" style="font-size: 16pt;">Sign Up</div>
 												</div>
-											</div>
-											<div class="container-fluid d-flex justify-content-end pt-5 ms-5">
-												<p class="me-1" style="font-size: 12pt;">atau </p>
-											<a href="../"
-												style="font-size: 12pt">
-												Daftar
-											</a>
 											</div>
 										</div>
 									</div>
@@ -159,7 +173,6 @@
 			</div>
 		</div>
 	</body>
-</html>
 <!-- plugins:js -->
 <script src="<?= BASEURL ?>/vendors/base/vendor.bundle.base.js"></script>
     <!-- endinject -->

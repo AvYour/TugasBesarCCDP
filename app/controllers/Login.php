@@ -5,4 +5,9 @@ class Login extends Controller{
         $data['judul'] = 'Login';
         $this->view('login/index',$data);
     }
+
+    public function register(){
+        $data['judul'] = 'Login';
+        $this->view('login/register',$data);
+    }
 }
