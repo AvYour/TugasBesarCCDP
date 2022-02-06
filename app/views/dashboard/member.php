@@ -1,7 +1,7 @@
 <div class="content-wrapper ">
     <div class="row">
         <div class="me-md-3 me-xl-5">
-            <h1>Data Member</h1>
+            <h1>Member</h1>
             <table class="table table-striped mt-4 align=" center">
                 <tr class="table-dark" align="center">
                     <td>Nama</td>
