@@ -39,7 +39,7 @@ body {
 .body {
     position: relative;
     width: 720px;
-    height: 530px;
+    height: 600px;
     margin: 20px auto;
     border: 1px solid #dddd;
     border-radius: 18px;
@@ -120,18 +120,18 @@ body {
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-							<div class="col-2">
-								<a href="<?= BASEURL ?>"
-									class="text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3"
-									style="text-align: left; font-size: 18pt">
-									Kembali
-								</a>
-							</div>
+                            <div class="col-2">
+                                <a href="<?= BASEURL ?>"
+                                    class="text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3"
+                                    style="text-align: left; font-size: 18pt">
+                                    Kembali
+                                </a>
+                            </div>
                             <div class="container-fluid">
                                 <div class="body d-md-flex align-items-center justify-content-between">
                                     <div class="box-1 d-flex flex-column h-150">
                                         <div class="mt-2 px-5">
-                                            <p class=" mb-3 h-1" style="text-align: center;">Sign Up</p>
+                                            <p class=" mb-5 h-1" style="text-align: center;">Sign Up</p>
                                             <form action="<?= BASEURL ?>/login/regUser" method="post">
                                                 <div class="mb-3">
                                                     <input type="text" class="form-control rounded-pill" id="nama"
@@ -145,12 +145,12 @@ body {
                                                     <input type="password" class="form-control rounded-pill"
                                                         id="password" placeholder="Password" name="password">
                                                 </div>
-												<div class="form-switch mb-2">
-													<input class="form-check-input" type="checkbox" role="switch"
-														id="checkbox-pass" onclick="myFunction()">
-													<label class="form-check-label mt-1" for="checkbox-pass">Show
-														Password</label>
-												</div>
+                                                <div class="form-switch mb-3">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="checkbox-pass" onclick="myFunction()">
+                                                    <label class="form-check-label mt-1" for="checkbox-pass">Show
+                                                        Password</label>
+                                                </div>
                                                 <p>Tanggal Lahir</p>
                                                 <div class="mb-3">
                                                     <input type="date" class="form-control rounded-pill" id="tgl_lahir"
@@ -216,7 +216,7 @@ body {
 <!-- End custom js for this page-->
 <script src="<?= BASEURL ?>/js/jquery.cookie.js" type="text/javascript"></script>
 <script>
-	function myFunction() {
+function myFunction() {
     var x = document.getElementById("password");
     if (x.type === "password") {
         x.type = "text";
