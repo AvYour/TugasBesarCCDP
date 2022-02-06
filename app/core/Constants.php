@@ -1,3 +1,3 @@
 <?php 
 
-define ('BASEURL', 'http://localhost/data/tubes_rpl2/public');
+define ('BASEURL', 'http://localhost/data/rpl2/public');
