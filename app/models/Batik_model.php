@@ -15,4 +15,10 @@ class Batik_model {
         $this->db->query("SELECT * FROM batik");
         return $this->db->resultSet();
     }
+    public function getBatikById($id)
+    {
+        $this->db->query("SELECT * FROM batik WHERE id=:id");
+        $this->db->bind('id',$id);
+        return $this->db->single();
+    }
 }
