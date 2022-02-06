@@ -113,45 +113,46 @@
 </style>
 
 <body>
-	<div class="content-wrapper">
-		<div class="row">
-			<div class="col-md-12 stretch-card">
-				<div class="card">
-					<div class="card-body">
-						<div class="row">
-							<a href="<?= BASEURL ?>" class="auth-link text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3" style="text-align: left; font-size: 18pt">
-								Kembali
-							</a>
+		<div class="content-wrapper">
+			<div class="row">
+				<div class="col-md-12 stretch-card">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-2">
+									<a href="<?= BASEURL ?>"
+										class="auth-link text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3"
+										style="text-align: left; font-size: 18pt">
+										Kembali
+									</a>
+								</div>
 							<div class="container-fluid">
 								<div class="body d-md-flex align-items-center justify-content-between">
 									<div class="box-2 d-flex flex-column h-100">
-										<div class="mt-5 px-5">
-											<p class="mt-4 mb-5 h-1" style="text-align: center;">Log in</p>
-											<form>
+										<?php Flasher::flashReg();?>
+										<div class="mt-3 px-5">
+											<p class="mt-1 mb-5 h-1" style="text-align: center;">Log in</p>
+											<form action="<?= BASEURL ?>/login/loginUser" method="post">
 												<div class="mb-3">
-													<input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+													<input type="email" class="form-control rounded-pill" name="email" id="email" aria-describedby="emailHelp" placeholder="Email">
 												</div>
-												<div class="container-fluid d-flex justify-content-end pt-5 ms-5">
-													<p class="me-1" style="font-size: 12pt;">atau </p>
-												<a href="<?= BASEURL ?>/login/register"
-													style="font-size: 12pt">
-													Daftar
-												</a>
+												<div class="mb-3">
+													<input type="password" class="form-control rounded-pill" name="password" id="password" placeholder="Password">
+												</div>
+												<div class="d-flex flex-column">
+													<div class="mt-4" style="text-align: center;">
+														<button class="btn btn-primary rounded-pill" style="font-size: 16pt;" type="submit">Login</button>
+													</div>
 												</div>
 											</form>
-											<div class="d-flex flex-column">
-												<div class="mt-4" style="text-align: center;">
-													<div class="btn btn-primary rounded-pill" style="font-size: 16pt;">Login</div>
-												</div>
-											</div>
-											<div class="container-fluid d-flex justify-content-end pt-5 ms-5">
+											<div class="container-fluid d-flex justify-content-end pt-3 ms-5">
 												<p class="me-1" style="font-size: 12pt;">atau </p>
-												<a href="../" style="font-size: 12pt">
-													Daftar
-												</a>
+											<a href="<?= BASEURL ?>/login/register"
+												style="font-size: 12pt">
+												Daftar
+											</a>
 											</div>
 										</div>
-										<div class="box-1 mt-md-0 mt-5"><img src="<?=BASEURL?>/img/wp6392619-batik-android-wallpapers.jpg" class="" alt="" /></div>
 									</div>
 									<div class="box-1 mt-md-0 mt-5"><img src="<?= BASEURL ?>/img/wp6392619-batik-android-wallpapers.jpg" class="" alt="" /></div>
 								</div>
@@ -161,7 +162,7 @@
 				</div>
 			</div>
 		</div>
-</body>
+	</body>
 
 </html>
 <!-- plugins:js -->
