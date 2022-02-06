@@ -1,13 +1,26 @@
-<div class="content-wrapper">
+<div class="content-wrapper ">
     <div class="row">
-        <div class="col-md-12 grid-margin">
-            <div class="d-flex justify-content-between flex-wrap">
-                <div class="d-flex align-items-end flex-wrap">
-                    <div class="me-md-3 me-xl-5">
-                        <h2>Halaman Member</h2>
-                    </div>
-                </div>
-            </div>
+        <div class="me-md-3 me-xl-5">
+            <h1>Data Member</h1>
+            <table class="table table-striped mt-4 align=" center">
+                <tr class="table-dark" align="center">
+                    <td>Nama</td>
+                    <td>Email</td>
+                    <td>Tanggal Lahir</td>
+                    <td>Jenis Kelamin</td>
+                    <td>Aksi </td>
+                </tr>
+                <!-- Ganti pake database gan + pagination -->
+                <?php for ($i = 0; $i < 6; $i++) { ?>
+                    <tr align="center">
+                        <td>John Doe</td>
+                        <td>john.doe07@mail.com</td>
+                        <td>01 Januari 2022</td>
+                        <td>Laki</td>
+                        <td><a href="#" class="mdi mdi-delete"></a></td>
+                    </tr>
+                <?php } ?>
+            </table>
         </div>
     </div>
 </div>
