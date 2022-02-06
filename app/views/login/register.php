@@ -120,29 +120,37 @@ body {
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <a href="<?= BASEURL ?>"
-                                class="auth-link text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3"
-                                style="text-align: left; font-size: 18pt">
-                                Kembali
-                            </a>
+							<div class="col-2">
+								<a href="<?= BASEURL ?>"
+									class="text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3"
+									style="text-align: left; font-size: 18pt">
+									Kembali
+								</a>
+							</div>
                             <div class="container-fluid">
                                 <div class="body d-md-flex align-items-center justify-content-between">
                                     <div class="box-1 d-flex flex-column h-150">
-                                        <div class="mt-3 px-5">
+                                        <div class="mt-2 px-5">
                                             <p class=" mb-3 h-1" style="text-align: center;">Sign Up</p>
                                             <form action="<?= BASEURL ?>/login/regUser" method="post">
                                                 <div class="mb-3">
-                                                    <input type="email" class="form-control rounded-pill" id="nama"
+                                                    <input type="text" class="form-control rounded-pill" id="nama"
                                                         aria-describedby="nama" placeholder="Nama" name="nama">
                                                 </div>
                                                 <div class="mb-3">
                                                     <input type="email" class="form-control rounded-pill" id="email"
                                                         aria-describedby="Email" placeholder="Email" name="email">
                                                 </div>
-                                                <div class="mb-3">
+                                                <div class="mb-1">
                                                     <input type="password" class="form-control rounded-pill"
                                                         id="password" placeholder="Password" name="password">
                                                 </div>
+												<div class="form-switch mb-2">
+													<input class="form-check-input" type="checkbox" role="switch"
+														id="checkbox-pass" onclick="myFunction()">
+													<label class="form-check-label mt-1" for="checkbox-pass">Show
+														Password</label>
+												</div>
                                                 <p>Tanggal Lahir</p>
                                                 <div class="mb-3">
                                                     <input type="date" class="form-control rounded-pill" id="tgl_lahir"
@@ -207,3 +215,13 @@ body {
 <script src="<?= BASEURL ?>/js/dataTables.bootstrap4.js"></script>
 <!-- End custom js for this page-->
 <script src="<?= BASEURL ?>/js/jquery.cookie.js" type="text/javascript"></script>
+<script>
+	function myFunction() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>

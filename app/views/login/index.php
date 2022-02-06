@@ -131,8 +131,12 @@
 												<div class="mb-3">
 													<input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
 												</div>
-												<div class="mb-3">
-													<input type="password" class="form-control rounded-pill" id="exampleInputPassword1" placeholder="Password">
+												<div class="container-fluid d-flex justify-content-end pt-5 ms-5">
+													<p class="me-1" style="font-size: 12pt;">atau </p>
+												<a href="<?= BASEURL ?>/login/register"
+													style="font-size: 12pt">
+													Daftar
+												</a>
 												</div>
 											</form>
 											<div class="d-flex flex-column">
@@ -147,6 +151,7 @@
 												</a>
 											</div>
 										</div>
+										<div class="box-1 mt-md-0 mt-5"><img src="<?=BASEURL?>/img/wp6392619-batik-android-wallpapers.jpg" class="" alt="" /></div>
 									</div>
 									<div class="box-1 mt-md-0 mt-5"><img src="<?= BASEURL ?>/img/wp6392619-batik-android-wallpapers.jpg" class="" alt="" /></div>
 								</div>

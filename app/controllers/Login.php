@@ -13,11 +13,11 @@ class Login extends Controller{
 
     public function regUser(){
         if($this->model('User_model')->tambahDataUser($_POST)>0){
-            Flasher::setFlash('berhasil','ditambahkan','success');
+            Flasher::setFlash('berhasil','Registrasi','success');
             header("Location: ". BASEURL . "/login");
             exit;
         }else {
-            Flasher::setFlash('gagal','ditambahkan','danger');
+            Flasher::setFlash('GAGAL','Registrasi','danger');
             header("Location: ". BASEURL . "/login/register");
             exit;
         }
