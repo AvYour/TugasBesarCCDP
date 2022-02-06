@@ -1,20 +1,27 @@
 <?php 
 
 class Batik_model {
-    private $batik = [
-        [
-            "nama" => "Batik A",
-            "asal_prov" => "Jabar",
-            "asal_kota" => "Kota A" 
-        ],
-        [
-            "nama" => "Batik B",
-            "asal_prov" => "Jatim",
-            "asal_kota" => "Kota B" 
-        ]
-    ];
+    private $dbh;
+    private $stmt;
+
+    public function __construct()
+    {
+        $dbhost = 'localhost'; // set the hostname
+		$dbname = 'rpl2'; // set the database name
+		$dbuser = 'root'; // set the mysql username
+        $dbpass = '';  // set the mysql password
+
+        $dsn = "mysql:host=$dbhost;dbname=$dbname";
+        try{
+            $this->dbh = new PDO($dsn, $dbuser,$dbpass);
+        } catch(PDOException $e) {
+            die($e->getMessage());
+        }
+    }
 
     public function getAllBatik(){
-        return $this->batik;
+        $this->stmt = $this->dbh->prepare('SELECT * FROM batik');
+        $this->stmt->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
