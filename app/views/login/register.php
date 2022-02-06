@@ -125,19 +125,19 @@
                                 </a>
 							<div class="container-fluid">
 								<div class="body d-md-flex align-items-center justify-content-between">
-									<div class="box-2 d-flex flex-column h-150">
+									<div class="box-1 d-flex flex-column h-150">
 										<div class="mt-3 px-5">
 											<p class=" mb-5 h-1" style="text-align: center;">Sign Up</p>
-											<form>
+											<form action="<?= BASEURL ?>/login/regUser" method="post">
 												<div class="mb-3">
-													<input type="username" class="form-control rounded-pill" id="exampleInputUsername" aria-describedby="Username" placeholder="Username">
+													<input type="email" class="form-control rounded-pill" id="email" aria-describedby="Email" placeholder="Email" name="email">
 												</div>
 												<div class="mb-3">
-													<input type="password" class="form-control rounded-pill" id="exampleInputPassword1" placeholder="Password">
+													<input type="password" class="form-control rounded-pill" id="password" placeholder="Password" name="password">
 												</div>
 												<p>Tanggal Lahir</p>
 												<div class="mb-3">
-													<input type="date" class="form-control rounded-pill" id="exampleInputDate" aria-describedby="date" placeholder="Date">
+													<input type="date" class="form-control rounded-pill" id="tgl_lahir" aria-describedby="date" name="tgl_lahir" placeholder="Date">
 												</div>
 								                <div class="col-6">
 													<p>Jenis Kelamin</p>
@@ -156,12 +156,12 @@
 														</div>
 													</div>
 												</div>
-											</form>
-											<div class="d-flex flex-column">
-												<div style="text-align: center;">
-													<div class="btn btn-primary rounded-pill" style="font-size: 16pt;">Sign Up</div>
+												<div class="d-flex flex-column">
+													<div style="text-align: center;">
+														<button class="btn btn-primary rounded-pill" style="font-size: 16pt;" type="submit">Sign Up</button>
+													</div>
 												</div>
-											</div>
+											</form>
 										</div>
 									</div>
 									<div class="box-1 mt-md-0 mt-5"><img src="<?=BASEURL?>/img/wp6392619-batik-android-wallpapers.jpg" class="" alt="" /></div>
