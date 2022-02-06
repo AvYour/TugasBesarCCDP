@@ -41,7 +41,7 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
                             <img src="<?= BASEURL ?>/img/P01.jpg" alt="profile" class="img-fluid" />
-                            <span class="nav-profile-name">Cecep</span>
+                            <span class="nav-profile-name"><?=$_SESSION['nama'] ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                             <a class="dropdown-item" href="profil">

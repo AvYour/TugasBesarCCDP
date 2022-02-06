@@ -34,4 +34,27 @@ class User_model{
         $this->db->execute();
         return $this->db->rowCount();
     }
+    public function loginUser($data){
+        $query = "SELECT * FROM user WHERE email=:email";
+        $this->db->query($query);
+        $this->db->bind('email',$data['email']);
+
+        $this->db->execute();
+        $dt = $this->db->single();
+
+        if($this->db->rowCount()>0){
+            if (password_verify($data['password'], $dt['password'])) {
+                $_SESSION["user_session"] = $dt["id"];
+                $_SESSION["nama"] = $dt["nama"];
+                $_SESSION["hakAkses"] = $dt["hakAkses"];
+                $_SESSION["email"] = $dt["email"];
+                $_SESSION["tgl_lahir"] = $dt["tgl_lahir"];
+                $_SESSION["jk"] = $dt["jk"];
+                $_SESSION["password"] = $data['password'];
+                header("Location: ".BASEURL."/dashboard");
+            } else return FALSE;
+        }
+        return $this->db->rowCount();
+
+    }
 }
