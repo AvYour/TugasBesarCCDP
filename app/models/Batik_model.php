@@ -4,24 +4,15 @@ class Batik_model {
     private $dbh;
     private $stmt;
 
+    private $db;
+
     public function __construct()
     {
-        $dbhost = 'localhost'; // set the hostname
-		$dbname = 'rpl2'; // set the database name
-		$dbuser = 'root'; // set the mysql username
-        $dbpass = '';  // set the mysql password
-
-        $dsn = "mysql:host=$dbhost;dbname=$dbname";
-        try{
-            $this->dbh = new PDO($dsn, $dbuser,$dbpass);
-        } catch(PDOException $e) {
-            die($e->getMessage());
-        }
+        $this->db = new Database;
     }
 
     public function getAllBatik(){
-        $this->stmt = $this->dbh->prepare('SELECT * FROM batik');
-        $this->stmt->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        $this->db->query("SELECT * FROM batik");
+        return $this->db->resultSet();
     }
 }
