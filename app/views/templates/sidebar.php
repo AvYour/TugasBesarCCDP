@@ -22,7 +22,24 @@
     <!-- SweetAlert2 -->
     <script src=" //cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
+        .nav {
+            padding: 20px;
+        }
 
+        .menu-title {
+            color: white;
+        }
+
+        .side {
+            padding: 5px;
+            margin-bottom: 10%;
+            border-radius: 10px;
+        }
+
+        .side:hover {
+            background-color: #212523;
+            color: white;
+        }
     </style>
     <title>Halaman <?= $data['judul'] ?></title>
 </head>
@@ -64,23 +81,23 @@
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                <ul class="nav">
-                    <li class="nav-item">
+                <ul class="nav mt-5">
+                    <li class="nav-item side">
                         <a class="nav-link" href="index">
-                            <i class="mdi mdi-home menu-icon"></i>
-                            <span class="menu-title">Dashboard</span>
+                            <i class="mdi mdi-24px mdi-view-dashboard menu-icon"></i>
+                            <span class="menu-title" style="font-size: 28px;">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item side">
                         <a class="nav-link" href="member">
-                            <i class="mdi mdi-account-multiple menu-icon"></i>
-                            <span class="menu-title">Member</span>
+                            <i class="mdi mdi-24px mdi-account-multiple menu-icon"></i>
+                            <span class="menu-title" style="font-size: 28px;">Member</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item side">
                         <a class="nav-link" href="batik">
-                            <i class="mdi mdi-account menu-icon"></i>
-                            <span class="menu-title">Batik</span>
+                            <i class="mdi mdi-24px mdi-texture menu-icon"></i>
+                            <span class="menu-title" style="font-size: 28px;">Batik</span>
                         </a>
                     </li>
                 </ul>
