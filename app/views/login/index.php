@@ -123,34 +123,39 @@
                                     style="text-align: left; font-size: 18pt">
                                     Kembali
                                 </a>
-							<div class="container-fluid">
-								<div class="body d-md-flex align-items-center justify-content-between">
-									<div class="box-2 d-flex flex-column h-100">
-										<div class="mt-5 px-5">
-											<p class="mt-4 mb-5 h-1" style="text-align: center;">Log in</p>
-											<form>
-												<div class="mb-3">
-													<input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+								<div class="container-fluid">
+									<div class="body d-md-flex align-items-center justify-content-between">
+									
+										<div class="box-2 d-flex flex-column h-100">
+											<p style="text-align: center;">
+												<?php Flasher::flashReg(); ?>
+											</p>
+											<div class="mt-3 px-5">
+												<p class="mt-1 mb-5 h-1" style="text-align: center;">Log in</p>
+												<form>
+													<div class="mb-3">
+														<input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+													</div>
+													<div class="mb-3">
+														<input type="password" class="form-control rounded-pill" id="exampleInputPassword1" placeholder="Password">
+													</div>
+												</form>
+												<div class="d-flex flex-column">
+													<div class="mt-4" style="text-align: center;">
+														<div class="btn btn-primary rounded-pill" style="font-size: 16pt;">Login</div>
+													</div>
 												</div>
-												<div class="mb-3">
-													<input type="password" class="form-control rounded-pill" id="exampleInputPassword1" placeholder="Password">
+												<div class="container-fluid d-flex justify-content-end pt-5 ms-5">
+													<p class="me-1" style="font-size: 12pt;">atau </p>
+												<a href="<?= BASEURL ?>/login/register"
+													style="font-size: 12pt">
+													Daftar
+												</a>
 												</div>
-											</form>
-											<div class="d-flex flex-column">
-												<div class="mt-4" style="text-align: center;">
-													<div class="btn btn-primary rounded-pill" style="font-size: 16pt;">Login</div>
-												</div>
-											</div>
-											<div class="container-fluid d-flex justify-content-end pt-5 ms-5">
-												<p class="me-1" style="font-size: 12pt;">atau </p>
-											<a href="../"
-												style="font-size: 12pt">
-												Daftar
-											</a>
 											</div>
 										</div>
+										<div class="box-1 mt-md-0 mt-5"><img src="<?=BASEURL?>/img/wp6392619-batik-android-wallpapers.jpg" class="" alt="" /></div>
 									</div>
-									<div class="box-1 mt-md-0 mt-5"><img src="<?=BASEURL?>/img/wp6392619-batik-android-wallpapers.jpg" class="" alt="" /></div>
 								</div>
 							</div>
 						</div>
@@ -158,7 +163,7 @@
 				</div>
 			</div>
 		</div>
-	</body>
+</body>
 </html>
 <!-- plugins:js -->
 <script src="<?= BASEURL ?>/vendors/base/vendor.bundle.base.js"></script>
