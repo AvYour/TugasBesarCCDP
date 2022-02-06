@@ -23762,7 +23762,7 @@ dl li {
   color: #000;
 }
 .carousel .carousel-item {
-  height: 450px;
+  height: 650px;
 }
 
 .carousel-item img {
@@ -23776,6 +23776,10 @@ dl li {
 .carousel-caption h1 {
  max-width: 100%;
  text-align:center;
+}
+
+.card img{
+  opacity: 1.0;
 }
 
 

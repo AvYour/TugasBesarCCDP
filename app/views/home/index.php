@@ -1,12 +1,12 @@
 <style>
 img {
-    opacity: 1.0;
-    background: rgba(0, 0, 0, 0.8);
+    opacity: 0.5;
+
 }
 
 img:hover {
-    opacity: 0.5;
-
+    opacity: 1.0;
+    background: rgba(0, 0, 0, 0.8);
 }
 </style>
 <main>
@@ -14,9 +14,9 @@ img:hover {
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" style="background: rgba(0, 0, 0, 0.8);">
-                <img src="img/oogha.com_wallpaper.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block position-absolute top-50 start-30">
-                    <h1 class="display1">Selamat Datang</h1>
+                <img src="img/1883300.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-center" style="margin-bottom: 13rem;">
+                    <h1 class="display1" style="font-size: 100px;">Selamat Datang</h1>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
@@ -24,7 +24,7 @@ img:hover {
                 <img src=" img/1883221.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" style="background-color: rgba(0, 0, 0, 0.8)">
-                <img src="img/batik-1.jpg" class="d-block w-100" alt="...">
+                <img src="img/image_processing20191101-25402-1gebd99.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
