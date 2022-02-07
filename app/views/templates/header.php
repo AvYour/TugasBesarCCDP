@@ -40,7 +40,8 @@
                     <a class="btn btn-outline-success" href="<?= BASEURL ?>/login">Login</a>
                     <a class="btn btn-outline-success" href="<?= BASEURL ?>/login/register">Daftar</a>
                     <?php else : ?>
-                    <?=$_SESSION['nama']?>
+                    <a class="btn btn-outline-success" href="<?= BASEURL ?>/dashboard/index">Dashboard</a>
+                    <a class="btn btn-outline-success" href="<?= BASEURL ?>/dashboard/logout">Logout</a>
                     <?php endif?>
                 </div>
             </div>

@@ -29,6 +29,7 @@ class Dashboard extends Controller
     public function profil()
     {
         $data['judul'] = 'Profil';
+        $data['user'] = $this->model('User_model')->getSingleUser($_SESSION['user_session']);
         $this->view('templates/sidebar', $data);
         $this->view('dashboard/profil', $data);
         $this->view('templates/footer.sidebar');
@@ -69,5 +70,16 @@ class Dashboard extends Controller
     public function logout()
     {
         $this->view('dashboard/logout');
+    }
+    public function ubahProfil(){
+        if ($this->model('User_model')->ubahDataUser($_POST) > 0) {
+            Flasher::setFlash('Data berhasil', 'diubah', 'success');
+            header("Location: " . BASEURL . "/dashboard/profil");
+            exit;
+        } else {
+            Flasher::setFlash('Data gagal', 'diubah', 'danger');
+            header("Location: " . BASEURL . "/dashboard/profil");
+            exit;
+        }
     }
 }
