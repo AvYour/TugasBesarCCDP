@@ -42,7 +42,7 @@ class Dashboard extends Controller
         $data['judul'] = 'Detail Batik';
         $data['batik'] = $this->model('Batik_model')->getBatikById($id);
         $this->view('templates/sidebar', $data);
-        $this->view('dashboard/detail_batik', $data);
+        $this->view('dashboard/detail', $data);
         $this->view('templates/footer.sidebar');
     }
 

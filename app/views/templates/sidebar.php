@@ -63,8 +63,7 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
                             <img src="<?= BASEURL ?>/img/<?=$data['user']['profil'] ?>" alt="profile"
                                 class="img-fluid" />
-                            <span
-                                class="nav-profile-name"><?=$_SESSION['user_session']? $data['user']['nama']:"Nama" ?></span>
+                            <span class="nav-profile-name"><?=$_SESSION? $data['user']['nama']:"Nama" ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
