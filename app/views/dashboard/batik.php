@@ -51,8 +51,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body mt-2">
-                                <div class="form-group mt-2">
+                            <div class="modal-body">
+                                <div class="form-group">
                                     <label for="nama-batik" style="font-size: 12pt">Nama Batik</label>
                                     <input type="text" class="form-control" id="tambah-batik" name="tambah-batik" />
                                     <label id="info-id"></label>
@@ -71,6 +71,11 @@
                                     <textarea class="form-control" name="tambah-deskripsi" id="tambah-deskripsi"
                                         cols="30" rows="10"></textarea>
                                 </div>
+                                <div class="form-group">
+                                    <label for="upload-foto" class="form-label">Upload Foto</label>
+                                    <input type="file" class="form-control" name="file" id="filename" />
+                                </div>
+
                             </div>
                             <div class="modal-footer">
                                 <input type="submit" name="tambah-batik" class="btn btn-primary" value="Simpan" />

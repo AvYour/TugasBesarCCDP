@@ -19,14 +19,8 @@
                             </div> -->
                         </div>
                     </div>
+                    
                     <!-- Modal Edit -->
-                    <!-- Button trigger modal -->
-                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        Launch static backdrop modal
-                    </button> -->
-
-                    <!-- Modal -->
                     <div class="modal fade" id="modal-edit" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -37,12 +31,38 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    isi field nya
+                                <div class="form-group mt-2 d-flex">
+                                    <img src="../../images/ class="img-fluid me-3"
+                                        id="gambar-batik" alt="..." style="width:140pt; height: 140pt;">
+                                    <div id="preview"></div>
+                                    <input type="file" id="ubah-gambar" name="ubah-gambar" style="display: none;"
+                                        accept="image/*" />
+                                    <label for="ubah-gambar" class="ms-3 text-primary hover"
+                                        style="margin: auto 5px; font-size: 16px; font-weight: 500;">Ubah Gambar</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nama-batik" style="font-size: 12pt">Nama Batik</label>
+                                    <input type="text" class="form-control" id="tambah-batik" name="tambah-batik" />
+                                    <label id="info-id"></label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nama-anggota" style="font-size: 12pt">Provinsi</label>
+                                    <input type="text" class="form-control" id="edit-provinsi"
+                                        name="edit-provinsi" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="nama-anggota" style="font-size: 12pt">Kota</label>
+                                    <input type="text" class="form-control" id="edit-kota" name="edit-kota" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="nama-anggota" style="font-size: 12pt">Deskripsi</label>
+                                    <textarea class="form-control" name="edit-deskripsi" id="edit-deskripsi"
+                                        cols="30" rows="10"></textarea>
+                                </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Understood</button>
+                                <input type="submit" name="tambah-batik" class="btn btn-primary" value="Simpan" />
+                                <input type="reset" class="btn btn-danger" />
                                 </div>
                             </div>
                         </div>
