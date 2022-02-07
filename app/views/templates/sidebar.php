@@ -68,7 +68,7 @@
                                 <i class="mdi mdi-account-circle text-primary"></i>
                                 Profile
                             </a>
-                            <a class="dropdown-item text-danger" href="../logout.php">
+                            <a class="dropdown-item text-danger" href="<?=BASEURL ?>/logout.php">
                                 <i class="mdi mdi-logout text-danger"></i>
                                 Logout
                             </a>
@@ -87,19 +87,19 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav mt-5">
                     <li class="nav-item side">
-                        <a class="nav-link" href="index">
+                        <a class="nav-link" href="<?=BASEURL?>/dashboard/index">
                             <i class="mdi mdi-24px mdi-view-dashboard menu-icon"></i>
                             <span class="menu-title" style="font-size: 28px;">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item side">
-                        <a class="nav-link" href="member">
+                        <a class="nav-link" href="<?=BASEURL?>/dashboard/member">
                             <i class="mdi mdi-24px mdi-account-multiple menu-icon"></i>
                             <span class="menu-title" style="font-size: 28px;">Member</span>
                         </a>
                     </li>
                     <li class="nav-item side">
-                        <a class="nav-link" href="batik">
+                        <a class="nav-link" href="<?=BASEURL?>/dashboard/batik">
                             <i class="mdi mdi-24px mdi-texture menu-icon"></i>
                             <span class="menu-title" style="font-size: 28px;">Batik</span>
                         </a>
