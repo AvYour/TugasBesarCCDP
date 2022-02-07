@@ -51,16 +51,20 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-center align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="<?=BASEURL?>/dashboard/index"><img
-                            src="<?= BASEURL ?>/img/P01.jpg" class="img-fluid w-100" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo mt-3" href="<?=BASEURL?>/dashboard/index">
+                        <!-- <img src="<?= BASEURL ?>/img/" class="img-fluid w-100" alt="logo" /> -->
+                        BatikPedia
+                    </a>
                 </div>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-                            <img src="<?= BASEURL ?>/img/P01.jpg" alt="profile" class="img-fluid" />
-                            <span class="nav-profile-name">Nama</span>
+                            <img src="<?= BASEURL ?>/img/<?=$data['user']['profil'] ?>" alt="profile"
+                                class="img-fluid" />
+                            <span
+                                class="nav-profile-name"><?=$_SESSION['user_session']? $data['user']['nama']:"Nama" ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
@@ -85,7 +89,7 @@
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                <ul class="nav mt-5">
+                <ul class="nav mt-2">
                     <li class="nav-item side">
                         <a class="nav-link" href="<?=BASEURL?>/dashboard/index">
                             <i class="mdi mdi-24px mdi-view-dashboard menu-icon"></i>

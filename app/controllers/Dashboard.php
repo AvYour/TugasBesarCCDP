@@ -5,6 +5,7 @@ class Dashboard extends Controller
     {
         $data['nama'] = $name;
         $data['judul'] = 'Dashboard';
+        $data['user'] = $this->model('User_model')->getSingleUser($_SESSION['user_session']);
         $data['batik'] = $this->model('Batik_model')->getAllBatik();
         $this->view('templates/sidebar', $data);
         $this->view('dashboard/index', $data);
@@ -13,6 +14,7 @@ class Dashboard extends Controller
     public function member()
     {
         $data['judul'] = 'Member';
+        $data['user'] = $this->model('User_model')->getSingleUser($_SESSION['user_session']);
         $data['member'] = $this->model('User_model')->getAllUser();
         $this->view('templates/sidebar', $data);
         $this->view('dashboard/member', $data);
@@ -21,6 +23,7 @@ class Dashboard extends Controller
     public function batik()
     {
         $data['judul'] = 'Batik';
+        $data['user'] = $this->model('User_model')->getSingleUser($_SESSION['user_session']);
         $data['batik'] = $this->model('Batik_model')->getAllBatik();
         $this->view('templates/sidebar', $data);
         $this->view('dashboard/batik', $data);
