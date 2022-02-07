@@ -16,10 +16,10 @@ if (!session_id()) session_start();
     </div>
     <div class="row">
         <div class="d-flex justify-content-start">
-            <div class="card mx-4 mb-3 rounded" style="min-width: 260px;">
+            <div class="card border mx-4 mb-3 rounded" style="min-width: 260px;">
                 <div class="row g-0">
                     <div class="col-md-4 text-center">
-                        <i class="mdi mdi-account-multiple" style="font-size: 400%;"></i>
+                        <i class="mdi mdi-account-multiple-outline" style="font-size: 400%;"></i>
                     </div>
                     <div class="col-md-7">
                         <div class="card-body">
@@ -29,7 +29,7 @@ if (!session_id()) session_start();
                     </div>
                 </div>
             </div>
-            <div class="card mb-3 rounded" style="min-width: 260px;">
+            <div class="card border mb-3 rounded" style="min-width: 260px;">
                 <div class="row g-0">
                     <div class="col-md-4 text-center">
                         <i class="mdi mdi-texture" style="font-size: 400%;"></i>
@@ -43,26 +43,16 @@ if (!session_id()) session_start();
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 grid-margin">
-                <div class="d-flex justify-content-between flex-wrap">
-                    <div class="d-flex align-items-end flex-wrap">
-                        <div class="contaiener-fluid">
-                            <div class="me-md-3 me-xl-5">
-                                <h2>Pengajuan Konten</h2>
-                            </div>
-                        </div>
-                        <!--Content Card-->
-                        <!-- Pake data batik yang status nya pending(belum disetujui) -->
-                        <!--Content Card-->
-                    </div>
-                </div>
+
+        <div class="row mt-2">
+            <div class="container">
+                <h2>Pengajuan Konten</h2>
             </div>
-        </div>
-        <div class="row">
+            <!--Content Card-->
+            <!-- Pake data batik yang status nya pending(belum disetujui) -->
             <div class="d-flex flex-wrap justify-content-center">
                 <?php foreach ($data['batik'] as $batik) : ?>
-                    <div class="card border-light mx-3 mt-2" style="width: 18rem;">
+                    <div class="card border mx-3 mt-3" style="width: 18rem;">
                         <img src="<?= BASEURL ?>/img/wp6392619-batik-android-wallpapers.jpg" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body border-light">
                             <h5 class="card-title"><?= $batik['nama'] ?></h5>
