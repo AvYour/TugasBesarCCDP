@@ -55,7 +55,7 @@ class User_model{
                 $_SESSION["tgl_lahir"] = $dt["tgl_lahir"];
                 $_SESSION["jk"] = $dt["jk"];
                 $_SESSION["password"] = $data['password'];
-                header("Location: ".BASEURL."/dashboard");
+                header("Location: ".BASEURL."/dashboard/index");
             } else return FALSE;
         }
         return $this->db->rowCount();
