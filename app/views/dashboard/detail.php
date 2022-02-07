@@ -4,13 +4,13 @@
             <div class="card">
                 <div class="card-body">
                     <!--Content Card-->
-                    <div class="container-fluid d-flex justify-content-start mt-2">
+                    <!-- <div class="container-fluid d-flex justify-content-start mt-2">
                         <a href="<?=BASEURL?>"
                             class="auth-link text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3"
                             style="text-align: left; font-size: 18pt">
                             Kembali
                         </a>
-                    </div>
+                    </div> -->
                     <div class="container-fluid d-flex justify-content-end mb-2">
                         <div class="row">
                             <div class="col">
