@@ -7,6 +7,8 @@ class Dashboard extends Controller
         $data['judul'] = 'Dashboard';
         $data['user'] = $this->model('User_model')->getSingleUser($_SESSION['user_session']);
         $data['batik'] = $this->model('Batik_model')->getAllBatik();
+        $data['sum_member'] = count($this->model('User_model')->getAllUser());
+        $data['sum_batik'] = count($this->model('Batik_model')->getAllBatik());
         $this->view('templates/sidebar', $data);
         $this->view('dashboard/index', $data);
         $this->view('templates/footer.sidebar');
