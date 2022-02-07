@@ -1,7 +1,6 @@
 <?php 
 
 class User_model{
-    private $nama = 'Rifki';
     private $dbh;
     private $stmt;
 
@@ -12,9 +11,6 @@ class User_model{
         $this->db = new Database;
     }
 
-    public function getUser(){
-        return $this->nama;
-    }
     public function getAllUser(){
         $this->db->query("SELECT * FROM user");
         return $this->db->resultSet();
@@ -56,5 +52,13 @@ class User_model{
         }
         return $this->db->rowCount();
 
+    }
+    public function hapusDataUser($id){
+        $query = "DELETE FROM user where id=:id";
+        $this->db->query($query);
+        $this->db->bind('id',$id);
+
+        $this->db->execute();
+        return $this->db->rowCount();
     }
 }
