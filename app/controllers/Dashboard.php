@@ -9,6 +9,7 @@ class Dashboard extends Controller{
     }
     public function member(){
         $data['judul'] = 'Member';
+        $data['member'] = $this->model('User_model')->getAllUser();
         $this->view('templates/sidebar',$data);
         $this->view('dashboard/member', $data);
         $this->view('templates/footer.sidebar');
