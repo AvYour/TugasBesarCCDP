@@ -4,19 +4,15 @@
             <div class="card">
                 <div class="card-body">
                     <!--Content Card-->
-                    <!-- <div class="container-fluid d-flex justify-content-start mt-2">
-                        <a href="<?=BASEURL?>"
-                            class="auth-link text-black text-decoration-none float-end mdi mdi-keyboard-backspace menu-icon mb-3"
-                            style="text-align: left; font-size: 18pt">
-                            Kembali
-                        </a>
-                    </div> -->
+                    <div class="container-fluid d-flex justify-content-start mt-2">
+                        <div class="col">
+                            <button class="btn btn-primary rounded-pill view-edit"
+                                data-id="<?=$data['batik']['id_batik'] ?>" style="font-size: 12pt;"
+                                type="button">Edit</button>
+                        </div>
+                    </div>
                     <div class="container-fluid d-flex justify-content-end mb-2">
                         <div class="row">
-                            <div class="col">
-                                <button class="btn btn-primary rounded-pill" style="font-size: 12pt;" type="button"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</button>
-                            </div>
                             <!-- <div class="col">
                                 <button class="btn btn-danger rounded-pill" style="font-size: 12pt;"
                                     type="button">Hapus</button>
@@ -31,7 +27,7 @@
                     </button> -->
 
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    <div class="modal fade" id="modal-edit" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -41,7 +37,7 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    ...
+                                    isi field nya
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"

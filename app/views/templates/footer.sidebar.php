@@ -7,6 +7,7 @@
     </body>
 
     </html>
+    <script src="<?= BASEURL ?>/js/script.js" type="text/javascript"></script>
     <!-- plugins:js -->
     <script src="<?= BASEURL ?>/vendors/base/vendor.bundle.base.js"></script>
     <!-- endinject -->
@@ -27,4 +28,3 @@
     <script src="<?= BASEURL ?>/js/dataTables.bootstrap4.js"></script>
     <!-- End custom js for this page-->
     <script src="<?= BASEURL ?>/js/jquery.cookie.js" type="text/javascript"></script>
-    <script src="<?= BASEURL ?>/js/script.js" type="text/javascript"></script>

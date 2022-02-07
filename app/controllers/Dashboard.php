@@ -85,4 +85,7 @@ class Dashboard extends Controller
             exit;
         }
     }
+    public function getUbahBatik(){
+        echo json_encode($this->model('Batik_model')->getBatikById($_POST['id']));
+    }
 }

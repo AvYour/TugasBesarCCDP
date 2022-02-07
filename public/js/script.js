@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  const baseurl = "http://localhost/rpl2/public/";
   $("#data-member").DataTable({
     language: {
       zeroRecords: "Tidak ada data yang ditampilkan",
@@ -20,5 +21,20 @@ $(document).ready(function () {
         document.location.href = url;
       }
     });
+  });
+
+  $(".view-edit").on("click", function () {
+    let id = $(this).data("id");
+    $.ajax({
+      url: baseurl + "dashboard/getUbahBatik",
+      data: { id: id },
+      method: "post",
+      dataType: "json",
+      success: function (data) {
+        console.log(data);
+      },
+    });
+
+    $("#modal-edit").modal("show");
   });
 });
