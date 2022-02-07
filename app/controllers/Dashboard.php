@@ -66,4 +66,8 @@ class Dashboard extends Controller
             exit;
         }
     }
+    public function logout()
+    {
+        $this->view('dashboard/logout');
+    }
 }
