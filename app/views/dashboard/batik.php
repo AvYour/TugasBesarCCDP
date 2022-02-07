@@ -29,7 +29,7 @@
         else echo "<div class='d-flex flex-wrap'>";
         ?>
         <?php foreach ($data['batik'] as $batik) : ?>
-            <div class="card border-light mx-3 mt-3" style="width: 13rem;">
+            <div class="card border-light mx-4 mt-3" style="width: 13rem;">
                 <img src="<?= BASEURL ?>/img/wp6392619-batik-android-wallpapers.jpg" class="card-img-top" alt="..." style="height: 200px;">
                 <div class="card-body border-light">
                     <h5 class="card-title"><?= $batik['nama'] ?></h5>
