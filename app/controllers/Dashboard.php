@@ -40,6 +40,7 @@ class Dashboard extends Controller
     public function detail($id)
     {
         $data['judul'] = 'Detail Batik';
+        $data['user'] = $this->model('User_model')->getSingleUser($_SESSION['user_session']);
         $data['batik'] = $this->model('Batik_model')->getBatikById($id);
         $this->view('templates/sidebar', $data);
         $this->view('dashboard/detail', $data);
