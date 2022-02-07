@@ -17,8 +17,8 @@ class Batik_model {
     }
     public function getBatikById($id)
     {
-        $this->db->query("SELECT * FROM batik WHERE id=:id");
-        $this->db->bind('id',$id);
+        $this->db->query("SELECT * FROM batik WHERE id_batik=:id_batik");
+        $this->db->bind('id_batik',$id);
         return $this->db->single();
     }
 
