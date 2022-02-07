@@ -130,20 +130,22 @@ body {
                             <div class="container-fluid">
                                 <div class="body d-md-flex align-items-center justify-content-between">
                                     <div class="box-1 d-flex flex-column h-150">
-                                        <div class="mt-2 px-5">
-                                            <p class=" mb-5 h-1" style="text-align: center;">Sign Up</p>
-                                            <form action="<?= BASEURL ?>/login/regUser" method="post">
+                                        <?php Flasher::flash()?>
+                                        <div class="mt-1 px-5">
+                                            <p class=" mb-3 h-1" style="text-align: center;">Sign Up</p>
+                                            <form action="<?= BASEURL ?>/login/regUser" method="post" id="form">
                                                 <div class="mb-3">
                                                     <input type="text" class="form-control rounded-pill" id="nama"
-                                                        aria-describedby="nama" placeholder="Nama" name="nama">
+                                                        aria-describedby="nama" placeholder="Nama" name="nama" required>
                                                 </div>
                                                 <div class="mb-3">
                                                     <input type="email" class="form-control rounded-pill" id="email"
-                                                        aria-describedby="Email" placeholder="Email" name="email">
+                                                        aria-describedby="Email" placeholder="Email" name="email"
+                                                        required>
                                                 </div>
                                                 <div class="mb-1">
                                                     <input type="password" class="form-control rounded-pill"
-                                                        id="password" placeholder="Password" name="password">
+                                                        id="password" placeholder="Password" name="password" required>
                                                 </div>
                                                 <div class="form-switch mb-3">
                                                     <input class="form-check-input" type="checkbox" role="switch"
@@ -154,7 +156,8 @@ body {
                                                 <p>Tanggal Lahir</p>
                                                 <div class="mb-3">
                                                     <input type="date" class="form-control rounded-pill" id="tgl_lahir"
-                                                        aria-describedby="date" name="tgl_lahir" placeholder="Date">
+                                                        aria-describedby="date" name="tgl_lahir" placeholder="Date"
+                                                        required>
                                                 </div>
                                                 <div class="col-6">
                                                     <p>Jenis Kelamin</p>
@@ -162,7 +165,7 @@ body {
                                                         <div class="form-check">
                                                             <label class="form-check-label">
                                                                 <input type="radio" class="form-check-input" name="jk"
-                                                                    id="jk" value="L">
+                                                                    id="jk" value="L" required>
                                                                 Laki - Laki
                                                                 <i class="input-helper"></i></label>
                                                         </div>

@@ -16,8 +16,12 @@ class Login extends Controller{
             Flasher::setFlash('berhasil. Silakan Login','Registrasi','success');
             header("Location: ". BASEURL . "/login");
             exit;
-        }else {
-            Flasher::setFlash('GAGAL','Registrasi','danger');
+        }else if($this->model('User_model')->tambahDataUser($_POST)==FALSE) {
+            Flasher::setFlash('Email sudah terdaftar','!','danger');
+            header("Location: ". BASEURL . "/login/register");
+            exit;
+        } else {
+            Flasher::setFlash('Registrasi','gagal','danger');
             header("Location: ". BASEURL . "/login/register");
             exit;
         }
