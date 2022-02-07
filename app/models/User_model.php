@@ -48,7 +48,7 @@ class User_model{
 
         if($this->db->rowCount()>0){
             if (password_verify($data['password'], $dt['password'])) {
-                $_SESSION["user_session"] = $dt["id"];
+                $_SESSION["user_session"] = $dt["id_user"];
                 $_SESSION["nama"] = $dt["nama"];
                 $_SESSION["hakAkses"] = $dt["hakAkses"];
                 $_SESSION["email"] = $dt["email"];
@@ -62,7 +62,7 @@ class User_model{
 
     }
     public function hapusDataUser($id){
-        $query = "DELETE FROM user where id=:id";
+        $query = "DELETE FROM user where id_user=:id";
         $this->db->query($query);
         $this->db->bind('id',$id);
 

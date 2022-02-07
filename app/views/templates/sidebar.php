@@ -68,7 +68,7 @@
                                 <i class="mdi mdi-account-circle text-primary"></i>
                                 Profile
                             </a>
-                            <a class="dropdown-item text-danger" href="<?=BASEURL ?>/dashboard/logout.php">
+                            <a class="dropdown-item text-danger" href="<?=BASEURL ?>/dashboard/logout">
                                 <i class="mdi mdi-logout text-danger"></i>
                                 Logout
                             </a>

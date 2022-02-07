@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['user_session'])){
-    header("Location: ".BASEURL."/dashboard");
+    header("Location: ".BASEURL."");
     exit;
 }
 $_SESSION = [];

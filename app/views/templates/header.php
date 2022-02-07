@@ -36,8 +36,12 @@
             <div class="container-fluid">
                 <a class="navbar-brand text-light" href="<?= BASEURL ?>">Batik</a>
                 <div class="d-flex">
+                    <?php if(!isset($_SESSION['user_session'])) : ?>
                     <a class="btn btn-outline-success" href="<?= BASEURL ?>/login">Login</a>
                     <a class="btn btn-outline-success" href="<?= BASEURL ?>/login/register">Daftar</a>
+                    <?php else : ?>
+                    <?=$_SESSION['nama']?>
+                    <?php endif?>
                 </div>
             </div>
         </nav>

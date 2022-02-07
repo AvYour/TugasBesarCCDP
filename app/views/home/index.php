@@ -66,10 +66,10 @@ img:hover {
                             <img src="img/wp6392619-batik-android-wallpapers.jpg" class="card-img-top" alt="..."
                                 style="height: 200px;">
                             <div class="card-body border-light">
-                                <h5 class="card-title"><?=$batik['nama'] ?></h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="<?= BASEURL ?>/home/detail/<?= $batik['id'] ?>" class="btn btn-primary">Baca
+                                <h5 class="card-title"><?=$batik['nama'] ?> <?=$batik['kota'] ?></h5>
+                                <p class="card-text"><?=$batik['excerpt']?></p>
+                                <a href="<?= BASEURL ?>/home/detail/<?= $batik['id_batik'] ?>"
+                                    class="btn btn-primary">Baca
                                     Sekarang »</a>
                             </div>
                         </div>

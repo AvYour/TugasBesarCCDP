@@ -24,7 +24,7 @@
                                 <h5 class="card-title">Title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's content.</p>
-                                <a href="<?= BASEURL ?>/dashboard/detail/<?= $batik['id'] ?>"
+                                <a href="<?= BASEURL ?>/dashboard/detail/<?= $batik['id_batik'] ?>"
                                     class="btn btn-primary">Baca
                                     Sekarang »</a>
                             </div>

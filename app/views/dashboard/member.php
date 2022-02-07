@@ -26,7 +26,7 @@
                             <td><?= $data['tgl_lahir'] ?></td>
                             <td><?= $data['jk'] ?></td>
                             <td>
-                                <button type="button" id="<?= BASEURL ?>/dashboard/hapusUser/<?=$data['id']?>"
+                                <button type="button" id="<?= BASEURL ?>/dashboard/hapusUser/<?=$data['id_user']?>"
                                     class="btn btn-danger hapus">Hapus</button>
                             </td>
                         </tr>
