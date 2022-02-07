@@ -7,9 +7,11 @@
     <div class="row">
         <div class="col-md-12 grid-margin">
             <div class="d-flex justify-content-between flex-wrap">
-                <div class="d-flex align-items-end flex-wrap">
-                    <div class="me-md-3 me-xl-5">
-                        <h2>Data Batik Nusantara</h2>
+                <div class="container-fluid">
+                    <div class="d-flex align-items-end flex-wrap">
+                        <div class="me-md-3 me-xl-5">
+                            <h2>Data Batik Nusantara</h2>
+                        </div>
                     </div>
                     <!--Content Card-->
                     <!-- Pake data batik yang status nya pending(belum disetujui) -->

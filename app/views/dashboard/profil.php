@@ -68,10 +68,8 @@
                                             </div>
                                         </div>
                                         <div class="mb-3 text-center responsive">
-                                            <button class="btn btn-danger rounded-pill" style="font-size: 14pt;"
-                                                type="submit">Reset</button>
                                             <button class="btn btn-primary rounded-pill" style="font-size: 14pt;"
-                                                type="submit">Edit</button>
+                                                type="submit">Simpan</button>
                                         </div>
                                     </form>
                                 </div>
