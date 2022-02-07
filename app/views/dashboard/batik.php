@@ -13,6 +13,14 @@
                             <h2>Data Batik Nusantara</h2>
                         </div>
                     </div>
+                    <div class="container-fluid mt-3 mb-3">
+                        <div class="row">
+                            <div class="col-12 d-flex flex-row-reverse">
+                                <button type="button" class="btn btn-primary rounded-pill" style="font-size: 12pt;" data-bs-toggle="modal"
+                                    data-bs-target="#modalTambah">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
                     <!--Content Card-->
                     <!-- Pake data batik yang status nya pending(belum disetujui) -->
                     <!--Content Card-->
@@ -31,6 +39,47 @@
                         </div>
                     <?php endforeach ?>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modalTambah" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="formTambahBatik">Form Tambah Batik</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body mt-2">
+                                    <div class="form-group mt-2">
+                                        <label for="nama-batik" style="font-size: 12pt">Nama Batik</label>
+                                        <input type="text" class="form-control" id="tambah-batik"
+                                                name="tambah-batik" />
+                                        <label id="info-id"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nama-anggota" style="font-size: 12pt">Provinsi</label>
+                                        <input type="text" class="form-control" id="tambah-provinsi"
+                                            name="tambah-provinsi" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nama-anggota" style="font-size: 12pt">Kota</label>
+                                        <input type="text" class="form-control" id="tambah-kota"
+                                            name="tambah-kota" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nama-anggota" style="font-size: 12pt">Deskripsi</label>
+                                        <input type="text" class="form-control" id="tambah-provinsi"
+                                            name="tambah-provinsi" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" name="tambah-batik" class="btn btn-primary" value="Simpan" />
+                                    <input type="reset" class="btn btn-danger" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Modal -->
             </div>
         </div>
     </div>
