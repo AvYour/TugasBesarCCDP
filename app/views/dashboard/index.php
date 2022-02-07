@@ -24,7 +24,7 @@ if (!session_id()) session_start();
                     <div class="col-md-7">
                         <div class="card-body">
                             <h2 class="card-title fs-5">Member</h2>
-                            <p class="card-text fs-5">20</p>
+                            <p class="card-text fs-5"><?=$data['sum_member'];?></p>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ if (!session_id()) session_start();
                     <div class="col-md-7">
                         <div class="card-body">
                             <h2 class="card-title fs-5">Batik</h2>
-                            <p class="card-text fs-5">15</p>
+                            <p class="card-text fs-5"><?=$data['sum_batik'];?></p>
                         </div>
                     </div>
                 </div>
@@ -52,20 +52,21 @@ if (!session_id()) session_start();
             <!-- Pake data batik yang status nya pending(belum disetujui) -->
             <div class="d-flex flex-wrap justify-content-center">
                 <?php foreach ($data['batik'] as $batik) : ?>
-                    <div class="card border mx-3 mt-3" style="width: 18rem;">
-                        <img src="<?= BASEURL ?>/img/wp6392619-batik-android-wallpapers.jpg" class="card-img-top" alt="..." style="height: 200px;">
-                        <div class="card-body border-light">
-                            <h5 class="card-title"><?= $batik['nama'] ?></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="<?= BASEURL ?>/dashboard/detail/<?= $batik['id_batik'] ?>" class="btn btn-primary">Baca
-                                Sekarang »</a>
-                            <div class="mt-2 mx-1 text-center">
-                                <a href="" class="btn btn-danger">Tolak</a>
-                                <a href="" class="btn btn-success">Setujui</a>
-                            </div>
+                <div class="card border mx-3 mt-3" style="width: 18rem;">
+                    <img src="<?= BASEURL ?>/img/wp6392619-batik-android-wallpapers.jpg" class="card-img-top" alt="..."
+                        style="height: 200px;">
+                    <div class="card-body border-light">
+                        <h5 class="card-title"><?= $batik['nama'] ?></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.</p>
+                        <a href="<?= BASEURL ?>/dashboard/detail/<?= $batik['id_batik'] ?>" class="btn btn-primary">Baca
+                            Sekarang »</a>
+                        <div class="mt-2 mx-1 text-center">
+                            <a href="" class="btn btn-danger">Tolak</a>
+                            <a href="" class="btn btn-success">Setujui</a>
                         </div>
                     </div>
+                </div>
                 <?php endforeach ?>
             </div>
         </div>
