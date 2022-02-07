@@ -9,7 +9,7 @@
             <div class="d-flex justify-content flex-wrap">
                 <div class="d-flex align-items flex-wrap">
                     <div class="container-fluid">
-                        <div class="me-md-3 me-xl-5 mb-5">
+                        <div class="me-md-3 me-xl-5">
                             <h1>Batik</h1>
                         </div>
                     </div>
@@ -28,13 +28,12 @@
                                     class="btn btn-primary">Baca
                                     Sekarang »</a>
                             </div>
+                            <?php endforeach ?>
                         </div>
-                        <?php endforeach ?>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
-<!-- content-wrapper ends -->
+    </div>
+    <!-- content-wrapper ends -->

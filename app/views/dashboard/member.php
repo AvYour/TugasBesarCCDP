@@ -3,7 +3,7 @@
         <div class="me-md-3 me-xl-5">
             <h1>Member</h1>
             <div class="col-6">
-                <?=Flasher::flash(); ?>
+                <?= Flasher::flash(); ?>
             </div>
             <div class="table-responsive">
                 <table id="data-member" class="table table-striped mt-4 table-paginate" align="center">
