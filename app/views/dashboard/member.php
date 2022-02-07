@@ -19,7 +19,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php // foreach ($getUser as $data) :?>
+                    <?php foreach ($data['member'] as $data) :?>
                     <tr>
                         <td><?= $data['nama'] ?></td>
                         <td><?= $data['email'] ?></td>
@@ -30,7 +30,7 @@
                     </tr>
                 <!-- Ganti pake database gan + pagination -->
                 </tbody>
-                    <?php //endforeach; ?>
+                    <?php endforeach; ?>
             </table>
         </div>
     </div>
