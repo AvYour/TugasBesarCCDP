@@ -31,7 +31,10 @@ $(document).ready(function () {
       method: "post",
       dataType: "json",
       success: function (data) {
-        console.log(data);
+        $("#edit-batik").val(data.nama);
+        $("#edit-provinsi").val(data.provinsi);
+        $("#edit-kota").val(data.kota);
+        $("#edit-deskripsi").val(data.deskripsi);
       },
     });
 
