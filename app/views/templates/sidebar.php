@@ -17,29 +17,30 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="<?= BASEURL ?>/images/favicon.png" />
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <!-- SweetAlert2 -->
     <script src=" //cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-        .nav {
-            padding: 20px;
-        }
+    .nav {
+        padding: 20px;
+    }
 
-        .menu-title {
-            color: white;
-        }
+    .menu-title {
+        color: white;
+    }
 
-        .side {
-            padding: 5px;
-            margin-bottom: 10%;
-            border-radius: 10px;
-        }
+    .side {
+        padding: 5px;
+        margin-bottom: 10%;
+        border-radius: 10px;
+    }
 
-        .side:hover {
-            background-color: #212523;
-            color: white;
-        }
+    .side:hover {
+        background-color: #212523;
+        color: white;
+    }
     </style>
     <title>Halaman <?= $data['judul'] ?></title>
 </head>
@@ -50,7 +51,8 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-center align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="#"><img src="<?= BASEURL ?>/img/P01.jpg" class="img-fluid w-100" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo" href="#"><img src="<?= BASEURL ?>/img/P01.jpg"
+                            class="img-fluid w-100" alt="logo" /></a>
                 </div>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -58,9 +60,10 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
                             <img src="<?= BASEURL ?>/img/P01.jpg" alt="profile" class="img-fluid" />
-                            <span class="nav-profile-name"><?=$_SESSION['nama'] ?></span>
+                            <span class="nav-profile-name">Nama</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="profileDropdown">
                             <a class="dropdown-item" href="profil">
                                 <i class="mdi mdi-account-circle text-primary"></i>
                                 Profile
@@ -72,7 +75,8 @@
                         </div>
                     </li>
                 </ul>
-                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
                     <span class="mdi mdi-menu"></span>
                 </button>
             </div>
