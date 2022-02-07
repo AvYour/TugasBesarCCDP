@@ -51,8 +51,8 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-center align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="#"><img src="<?= BASEURL ?>/img/P01.jpg"
-                            class="img-fluid w-100" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo" href="<?=BASEURL?>/dashboard/index"><img
+                            src="<?= BASEURL ?>/img/P01.jpg" class="img-fluid w-100" alt="logo" /></a>
                 </div>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -68,7 +68,7 @@
                                 <i class="mdi mdi-account-circle text-primary"></i>
                                 Profile
                             </a>
-                            <a class="dropdown-item text-danger" href="<?=BASEURL ?>/logout.php">
+                            <a class="dropdown-item text-danger" href="<?=BASEURL ?>/dashboard/logout.php">
                                 <i class="mdi mdi-logout text-danger"></i>
                                 Logout
                             </a>
