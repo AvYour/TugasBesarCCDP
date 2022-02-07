@@ -23,19 +23,23 @@
     <!--Content Card-->
     <!-- Ganti pake database gan + pagination -->
     <div class="row">
-        <div class="d-flex flex-wrap justify-content-between">
-            <?php foreach ($data['batik'] as $batik) : ?>
-                <div class="card border-light mx-3 mt-3" style="width: 13rem;">
-                    <img src="<?= BASEURL ?>/img/wp6392619-batik-android-wallpapers.jpg" class="card-img-top" alt="..." style="height: 200px;">
-                    <div class="card-body border-light">
-                        <h5 class="card-title"><?= $batik['nama'] ?></h5>
-                        <a href="<?= BASEURL ?>/dashboard/detail/<?= $batik['id'] ?>" class="btn btn-primary">Baca
-                            Sekarang »</a>
-                    </div>
+        <?php
+        if (count($data['batik']) > 3)
+            echo "<div class='d-flex flex-wrap justify-content-between'>";
+        else echo "<div class='d-flex flex-wrap'>";
+        ?>
+        <?php foreach ($data['batik'] as $batik) : ?>
+            <div class="card border-light mx-3 mt-3" style="width: 13rem;">
+                <img src="<?= BASEURL ?>/img/wp6392619-batik-android-wallpapers.jpg" class="card-img-top" alt="..." style="height: 200px;">
+                <div class="card-body border-light">
+                    <h5 class="card-title"><?= $batik['nama'] ?></h5>
+                    <a href="<?= BASEURL ?>/dashboard/detail/<?= $batik['id'] ?>" class="btn btn-primary">Baca
+                        Sekarang »</a>
                 </div>
-            <?php endforeach ?>
-        </div>
+            </div>
+        <?php endforeach ?>
     </div>
+</div>
 
 </div>
 <!-- content-wrapper ends -->
