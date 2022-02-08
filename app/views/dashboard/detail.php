@@ -32,32 +32,35 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group mt-2 d-flex">
-                                        <img src="../../images/" class="img-fluid me-3 id" name="gambar-batik" alt="..."
-                                            style="width:140pt; height: 140pt;">
-                                        <div id="preview"></div>
-                                        <input type="file" id="ubah-gambar" name="ubah-gambar" style="display: none;"
-                                            accept="image/*" />
-                                        <label for="ubah-gambar" class="ms-3 text-primary hover"
-                                            style="margin: auto 5px; font-size: 16px; font-weight: 500;">Ubah
-                                            Gambar</label>
+                                        <div class="container-fluid d-flex flex-column mt-4 ms-3 align-items-center">
+                                            <img src="<?= BASEURL ?>/img/3.jpg" class="img-fluid me-3 rounded id"
+                                                name="gambar-batik" alt="..." style="width:140pt; height: 140pt;">
+                                            <div id="preview"></div>
+                                            <input type="file" id="ubah-gambar" name="ubah-gambar"
+                                                style="display: none;" accept="image/*" />
+                                            <label for="ubah-gambar" class="text-primary  text-center"
+                                                style="font-size: 16px; font-weight: 500;">Ubah
+                                                Gambar</label>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="nama-batik" style="font-size: 12pt">Nama Batik</label>
-                                        <input type="text" class="form-control" id="edit-batik" name="edit-batik" />
-                                        <label id="info-id"></label>
+                                        <input type="text" class="form-control rounded-pill" id="edit-batik"
+                                            name="edit-batik" />
                                     </div>
                                     <div class="form-group">
                                         <label for="nama-anggota" style="font-size: 12pt">Provinsi</label>
-                                        <input type="text" class="form-control" id="edit-provinsi"
+                                        <input type="text" class="form-control rounded-pill" id="edit-provinsi"
                                             name="edit-provinsi" />
                                     </div>
                                     <div class="form-group">
                                         <label for="nama-anggota" style="font-size: 12pt">Kota</label>
-                                        <input type="text" class="form-control" id="edit-kota" name="edit-kota" />
+                                        <input type="text" class="form-control rounded-pill" id="edit-kota"
+                                            name="edit-kota" />
                                     </div>
                                     <div class="form-group">
                                         <label for="nama-anggota" style="font-size: 12pt">Deskripsi</label>
-                                        <textarea class="form-control" name="edit-deskripsi" id="edit-deskripsi"
+                                        <textarea class="form-control rounded" name="edit-deskripsi" id="edit-deskripsi"
                                             cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
@@ -77,9 +80,11 @@
                         <article class="blog-post">
                             <h5 class="display-3"><?=$data['batik']['nama'] ?></h5>
                             <p class="blog-post-meta text-secondary">January 1, 2021 by Mark</p>
-                            <p class="font-weight-light">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                            <p class="font-weight-light">Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                                dolor
                                 auctor. Duis mollis, est
-                                non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi
+                                non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                                Morbi
                                 leo risus, porta ac consectetur ac, vestibulum at eros.</p>
                     </div>
                 </div>
