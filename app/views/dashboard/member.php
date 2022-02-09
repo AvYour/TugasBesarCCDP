@@ -24,16 +24,18 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach ($data['member'] as $data) : ?>
-                                            <tr align="center">
-                                                <td><?= $data['nama'] ?></td>
-                                                <td><?= $data['email'] ?></td>
-                                                <td><?= $data['hakAkses'] ?></td>
-                                                <td><?= $data['tgl_lahir'] ?></td>
-                                                <td><?= $data['jk'] ?></td>
-                                                <td>
-                                                    <button type="button" id="<?= BASEURL ?>/dashboard/hapusUser/<?= $data['id_user'] ?>" class="btn btn-danger hapus">Hapus</button>
-                                                </td>
-                                            </tr>
+                                        <tr align="center">
+                                            <td><?= $data['nama'] ?></td>
+                                            <td><?= $data['email'] ?></td>
+                                            <td><?= $data['hakAkses'] ?></td>
+                                            <td><?= $data['tgl_lahir'] ?></td>
+                                            <td><?= $data['jk'] ?></td>
+                                            <td>
+                                                <button type="button" style="height: 30px"
+                                                    id="<?= BASEURL ?>/dashboard/hapusUser/<?= $data['id_user'] ?>"
+                                                    class="btn btn-danger hapus">Hapus</button>
+                                            </td>
+                                        </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
