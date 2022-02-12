@@ -17,51 +17,52 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="<?= BASEURL ?>/images/favicon.png" />
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <!-- SweetAlert2 -->
     <script src=" //cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
 
-        .nav {
-            padding: 20px;
-        }
+    .nav {
+        padding: 20px;
+    }
 
-        .cobacik {
-            color: white;
-        }
+    .cobacik {
+        color: white;
+    }
 
-        .side {
-            padding: 5px;
-            margin-bottom: 10%;
-            border-radius: 10px;
-        }
+    .side {
+        padding: 5px;
+        margin-bottom: 10%;
+        border-radius: 10px;
+    }
 
-        .side:hover {
-            background-color: #e6e6e6;
-        }
+    .side:hover {
+        background-color: #e6e6e6;
+    }
 
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
 
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: #DCDCDC;
-            border-radius: 10px;
-        }
+    ::-webkit-scrollbar-thumb {
+        background: #DCDCDC;
+        border-radius: 10px;
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #999;
-        }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #999;
+    }
     </style>
     <title>Halaman <?= $data['judul'] ?></title>
 </head>
@@ -82,10 +83,12 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-                            <img src="<?= BASEURL ?>/img/<?= $data['user']['profil'] ?>" alt="profile" class="img-fluid" />
+                            <img src="<?= BASEURL ?>/img/<?= $data['user']['profil'] ?>" alt="profile"
+                                class="img-fluid" />
                             <span class="nav-profile-name"><?= $_SESSION ? $data['user']['nama'] : "Nama" ?></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="profileDropdown">
                             <a class="dropdown-item" href="profil">
                                 <i class="mdi mdi-account-circle text-primary"></i>
                                 Profile
@@ -97,7 +100,8 @@
                         </div>
                     </li>
                 </ul>
-                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
                     <span class="mdi mdi-menu"></span>
                 </button>
             </div>
@@ -113,12 +117,14 @@
                             <span class="menu-title cobacik" style="font-size: 28px;">Dashboard</span>
                         </a>
                     </li>
+                    <?php if($data['user']['hakAkses']=='admin'):?>
                     <li class="nav-item side">
                         <a class="nav-link" href="<?= BASEURL ?>/dashboard/member">
                             <i class="mdi mdi-24px mdi-account-multiple menu-icon"></i>
                             <span class="menu-title" style="font-size: 28px;">Member</span>
                         </a>
                     </li>
+                    <?php endif?>
                     <li class="nav-item side">
                         <a class="nav-link" href="<?= BASEURL ?>/dashboard/batik">
                             <i class="mdi mdi-24px mdi-texture menu-icon"></i>

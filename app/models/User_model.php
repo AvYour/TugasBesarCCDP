@@ -25,7 +25,7 @@ class User_model{
         if($this->db->single()>0){
             return FALSE;
         }else {
-            $query = "INSERT INTO user VALUES ('',:nama,:email,:password,:hakAkses,:tgl_lahir,:jk)";
+            $query = "INSERT INTO user VALUES ('',:nama,:email,:password,:hakAkses,:tgl_lahir,:jk,'')";
             $this->db->query($query);
             $this->db->bind('nama',$data['nama']);
             $this->db->bind('email',$data['email']);

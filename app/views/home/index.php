@@ -66,7 +66,7 @@ img:hover {
                             <img src="img/wp6392619-batik-android-wallpapers.jpg" class="card-img-top" alt="..."
                                 style="height: 200px;">
                             <div class="card-body border-light">
-                                <h5 class="card-title"><?=$batik['nama'] ?> <?=$batik['kota'] ?></h5>
+                                <h5 class="card-title"><?=$batik['nama_batik'] ?></h5>
                                 <p class="card-text"><?=$batik['excerpt']?></p>
                                 <a href="<?= BASEURL ?>/home/detail/<?= $batik['id_batik'] ?>"
                                     class="btn btn-primary">Baca
