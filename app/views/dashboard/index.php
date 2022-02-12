@@ -1,6 +1,3 @@
-<?php
-if (!session_id()) session_start();
-?>
 <div class="content-wrapper">
     <div class="row">
         <div class="col-md-12 stretch-card">

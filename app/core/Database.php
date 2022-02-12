@@ -20,6 +20,7 @@ class Database{
             try{
                 $this->dbh = new PDO($dsn, $this->dbuser,$this->dbpass, $option);
             } catch(PDOException $e) {
+                echo '<strong>Mohon Maaf terjadi Kesalahan. Koneksi ke Database GAGAL.</strong><br>';
                 die($e->getMessage());
             }
         }

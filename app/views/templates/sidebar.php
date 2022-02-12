@@ -1,3 +1,9 @@
+<?php
+if (empty($_SESSION)) {
+    header("Location: ".BASEURL."/dashboard/error/1");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

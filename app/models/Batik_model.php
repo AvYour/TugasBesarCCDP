@@ -12,7 +12,8 @@ class Batik_model {
     }
 
     public function getAllBatik(){
-        $this->db->query("SELECT * FROM batik where status='1'");
+        $this->db->query("SELECT * FROM batik JOIN user USING(id_user) JOIN provinsi USING(provinsi_id) JOIN kabupaten_kota USING(kabupaten_kota_id) where status=:status");
+        $this->db->bind('status','1');
         return $this->db->resultSet();
     }
     public function getBatikById($id)

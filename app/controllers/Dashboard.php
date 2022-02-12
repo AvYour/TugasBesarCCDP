@@ -186,4 +186,19 @@ class Dashboard extends Controller
             exit;
         }
     }
+    public function error($params){
+        if($params==1){
+            Flasher::setFlash('Anda harus login terlebih dahulu!!!','Access Denied!', 'danger');
+            header("Location: " . BASEURL . "/login");
+            exit;
+        } else if($params==2){
+            Flasher::setFlash('Hubungi administrator!','Gagal Koneksi ke Database', 'danger');
+            header("Location: " . BASEURL . "/login");
+            exit;
+        } else if($params==3){
+
+        } else if($params==4){
+
+        }
+    }
 }

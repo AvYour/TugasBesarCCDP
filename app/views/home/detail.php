@@ -13,17 +13,17 @@
                     </div>
 
                     <div class="container-fluid d-flex justify-content-center">
-                        <img src="http://localhost/rpl2/public/img/wp6392619-batik-android-wallpapers.jpg"
+                        <img src="<?=BASEURL ?>/img/img_batik/<?=$data['batik']['gambar'] ?>"
                             class="img-fluid me- rounded" alt="..." style="height: 350px; width:500px">
                     </div>
                     <div class="container-fluid d-flex justify-content-start mt-4">
                         <article class="blog-post">
-                            <h5 class="display-3"><?=$data['batik']['nama'] ?></h5>
-                            <p class="blog-post-meta text-secondary">January 1, 2021 by Mark</p>
-                            <p class="font-weight-light">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                                auctor. Duis mollis, est
-                                non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi
-                                leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                            <h5 class="display-3"><?=$data['batik']['nama_batik'] ?></h5>
+                            <p class="blog-post-meta text-secondary"><?=$data['batik']['last_modified'];?> Oleh
+                                <?=$data['batik']['nama'] ?> </p>
+                            <p class="blog-post-meta text-primary">Asal : Provinsi <?=$data['batik']['nama_prov']?>,
+                                <?=$data['batik']['nama_kab'] ?> </p>
+                            <p class="font-weight-light"><?=$data['batik']['deskripsi'] ?></p>
                     </div>
                 </div>
             </div>
