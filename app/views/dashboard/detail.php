@@ -59,7 +59,7 @@
                                         <div class="form-group">
                                             <label for="nama-batik" style="font-size: 12pt">Nama Batik</label>
                                             <input type="text" class="form-control rounded-pill" id="edit-batik"
-                                                name="edit-batik" />
+                                                name="edit-batik" required />
                                             <input type="hidden" class="form-control rounded-pill" id="edit-id"
                                                 name="edit-id" value="<?=$data['batik']['id_batik'] ?>" />
                                             <input type="hidden" class="form-control rounded-pill" id="edit-id-user"
@@ -71,7 +71,7 @@
                                         <div class="form-group">
                                             <label for="nama-anggota" style="font-size: 12pt">Provinsi</label>
                                             <select class="form-control rounded-pill" id="edit-provinsi"
-                                                name="edit-provinsi">
+                                                name="edit-provinsi" required>
                                                 <option value="0">Pilih Provinsi</option>
                                                 <?php foreach($data['provinsi'] as $prov): ?>
                                                 <option value=<?=$prov['provinsi_id']?>><?=$prov['nama_prov'] ?>
@@ -81,19 +81,20 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="nama-anggota" style="font-size: 12pt">Kota</label>
-                                            <select class="form-control rounded-pill" id="edit-kota" name="edit-kota">
+                                            <select class="form-control rounded-pill" id="edit-kota" name="edit-kota"
+                                                required>
                                                 <option value="0">Pilih Kabupaten/Kota</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="nama-anggota" style="font-size: 12pt">Deskripsi</label>
                                             <textarea class="form-control rounded" name="edit-deskripsi"
-                                                id="edit-deskripsi" cols="30" rows="10"></textarea>
+                                                id="edit-deskripsi" cols="30" rows="10" required></textarea>
                                         </div>
                                         <div class="form-group mt-2">
                                             <label for="nama-anggota" style="font-size: 12pt">Excerpt</label>
                                             <textarea class="form-control rounded" name="edit-excerpt" id="edit-excerpt"
-                                                cols="30" rows="5"></textarea>
+                                                cols="30" rows="5" required></textarea>
                                         </div>
                                     </div>
                                     <div class="modal-footer">

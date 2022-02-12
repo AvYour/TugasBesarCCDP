@@ -64,7 +64,7 @@
                                                         <label for="tambah-gambar" class="form-label">Gambar</label>
                                                         <input class="form-control rounded-pill" type="file"
                                                             name="tambah-gambar" id="tambah-gambar"
-                                                            accept="image/png, image/gif, image/jpeg" />
+                                                            accept="image/png, image/gif, image/jpeg" required />
                                                         <center>
                                                             <div id="preview" class="mt-2"></div>
                                                         </center>
@@ -77,13 +77,13 @@
                                                         <input type="hidden" name="hakAkses" id="hakAkses"
                                                             value="<?=$data['user']['hakAkses'] ?>">
                                                         <input type="text" class="form-control rounded-pill"
-                                                            id="tambah-batik" name="tambah-batik" />
+                                                            id="tambah-batik" name="tambah-batik" required />
                                                     </div>
                                                     <div class="form-group mt-2">
                                                         <label for="nama-anggota"
                                                             style="font-size: 12pt">Provinsi</label>
                                                         <select class="form-control rounded-pill" id="tambah-provinsi"
-                                                            name="tambah-provinsi">
+                                                            name="tambah-provinsi" required>
                                                             <option value="0">Pilih Provinsi</option>
                                                             <?php foreach($data['provinsi'] as $prov): ?>
                                                             <option value=<?=$prov['provinsi_id']?>>
@@ -98,7 +98,7 @@
                                                         <label for="nama-anggota"
                                                             style="font-size: 12pt">Kab/Kota</label>
                                                         <select class="form-control rounded-pill" id="tambah-kota"
-                                                            name="tambah-kota">
+                                                            name="tambah-kota" required>
                                                             <option value="0">Pilih Kabupaten/Kota</option>
                                                         </select>
                                                     </div>
@@ -106,13 +106,14 @@
                                                         <label for="nama-anggota"
                                                             style="font-size: 12pt">Deskripsi</label>
                                                         <textarea class="form-control rounded" name="tambah-deskripsi"
-                                                            id="tambah-deskripsi" cols="30" rows="10"></textarea>
+                                                            id="tambah-deskripsi" cols="30" rows="10"
+                                                            required></textarea>
                                                     </div>
                                                     <div class="form-group mt-2">
                                                         <label for="nama-anggota"
                                                             style="font-size: 12pt">Excerpt</label>
                                                         <textarea class="form-control rounded" name="tambah-excerpt"
-                                                            id="tambah-excerpt" cols="30" rows="5"></textarea>
+                                                            id="tambah-excerpt" cols="30" rows="5" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">

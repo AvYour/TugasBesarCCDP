@@ -39,13 +39,13 @@
                                                 value="<?=$_SESSION['user_session']? $data['user']['id_user']:""?>">
                                             <input type="text" class="form-control rounded-pill" id="nama"
                                                 aria-describedby="nama" name="nama"
-                                                value="<?=$_SESSION['nama']? $data['user']['nama']:""?>">
+                                                value="<?=$_SESSION['nama']? $data['user']['nama']:""?>" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="Email">Email</label>
                                             <input type="email" class="form-control rounded-pill" id="email"
                                                 aria-describedby="email" name="email" readonly
-                                                value="<?=$_SESSION['email']? $data['user']['email']:""?>">
+                                                value="<?=$_SESSION['email']? $data['user']['email']:""?>" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="Password">Password</label>
@@ -66,7 +66,8 @@
                                             <label for="Password">Tanggal Lahir</label>
                                             <input type="date" class="form-control rounded-pill" id="tgl_lahir"
                                                 aria-describedby="date" name="tgl_lahir"
-                                                value="<?=$_SESSION['tgl_lahir']? $data['user']['tgl_lahir']:""?>">
+                                                value="<?=$_SESSION['tgl_lahir']? $data['user']['tgl_lahir']:""?>"
+                                                required>
                                         </div>
                                         <div class="col-6">
                                             <p>Jenis Kelamin</p>
@@ -74,7 +75,8 @@
                                                 <div class="form-check">
                                                     <label class="form-check-label">
                                                         <input type="radio" class="form-check-input" name="jk" id="jk"
-                                                            value="L" <?=$data['user']['jk']=="L"?"checked":"" ?>>
+                                                            value="L" <?=$data['user']['jk']=="L"?"checked":"" ?>
+                                                            required>
                                                         Laki - Laki
                                                         <i class="input-helper"></i></label>
                                                 </div>
