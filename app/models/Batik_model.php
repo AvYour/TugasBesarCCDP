@@ -135,7 +135,7 @@ class Batik_model {
                 move_uploaded_file($tmpName,$_SERVER["DOCUMENT_ROOT"]."/rpl2/public/img/img_batik/".$file);
                 $change = 1;
                 }
-                $query = "UPDATE batik set id_user=:id_user, provinsi_id=:prov, kabupaten_kota_id=:kab, nama_batik=:nama, deskripsi=:deskripsi, excerpt=:excerpt, status=:status, gambar=:gambar where id_batik=:id_batik";
+                $query = "UPDATE batik set id_user=:id_user, provinsi_id=:prov, kabupaten_kota_id=:kab, nama_batik=:nama, deskripsi=:deskripsi, excerpt=:excerpt, last_modified=CURRENT_TIMESTAMP(), status=:status, gambar=:gambar where id_batik=:id_batik";
                 $this->db->query($query);
                 $this->db->bind('id_batik',$data['edit-id']);
                 $this->db->bind('id_user',$data['edit-id-user']);
@@ -148,11 +148,21 @@ class Batik_model {
                 $this->db->bind('gambar',$file);
                 $this->db->execute();
                 return array($this->db->rowCount(), $change);
+                // return $this->db->rowCount();
             } else {
-                echo "
-                <script>
-                alert('Upload Gambar Batik!');
-                </script>";
+                $query = "UPDATE batik set id_user=:id_user, provinsi_id=:prov, kabupaten_kota_id=:kab, nama_batik=:nama, deskripsi=:deskripsi, excerpt=:excerpt, last_modified=CURRENT_TIMESTAMP(), status=:status where id_batik=:id_batik";
+                $this->db->query($query);
+                $this->db->bind('id_batik',$data['edit-id']);
+                $this->db->bind('id_user',$data['edit-id-user']);
+                $this->db->bind('prov',$data['edit-provinsi']);
+                $this->db->bind('kab',$data['edit-kota']);
+                $this->db->bind('nama',$data['edit-batik']);
+                $this->db->bind('deskripsi',$data['edit-deskripsi']);
+                $this->db->bind('excerpt',$data['edit-excerpt']);
+                $this->db->bind('status','1');
+                $this->db->execute();
+                // return array($this->db->rowCount(), $change);
+                return $this->db->rowCount();
             }
     }
     public function pengajuanUbahDataBatik($data){

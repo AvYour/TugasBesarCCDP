@@ -195,10 +195,6 @@ class Dashboard extends Controller
             Flasher::setFlash('Hubungi administrator!','Gagal Koneksi ke Database', 'danger');
             header("Location: " . BASEURL . "/login");
             exit;
-        } else if($params==3){
-
-        } else if($params==4){
-
         }
     }
 }

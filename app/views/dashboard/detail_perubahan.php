@@ -42,7 +42,7 @@
                                         <?=$data['batik']['nama_prov']?> -
                                         <?=$data['batik']['nama_kab'] ?></p>
                                     <p class="blog-post-meta text-secondary">Dibuat Oleh :
-                                        <?=$data['batik']['nama'] ?>, <?=$data['batik']['created_at'] ?> </p>
+                                        <?=$data['batik']['nama'] ?>, <?=$data['batik']['last_modified'] ?> </p>
                                     <p class="font-weight-light"><?=$data['batik']['deskripsi'] ?></p>
                             </div>
                         </div>
