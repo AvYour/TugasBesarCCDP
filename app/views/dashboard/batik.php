@@ -38,10 +38,20 @@
                                             class="card-img-top" alt="..." style="height: 200px;">
                                         <div class="card-body border-light">
                                             <h5 class="card-title"><?= $batik['nama_batik'] ?></h5>
-                                            <p class="card-text"><?=$batik['excerpt'] ?></p>
+                                            <p class="blog-post-meta text-secondary"> Oleh
+                                                <?=$batik['nama'] ?> </p>
+                                            <p class="blog-post-meta text-secondary">Asal : Provinsi
+                                                <?=$batik['nama_prov']?>,
+                                                <?=$batik['nama_kab'] ?> </p>
+                                            <p class="card-text"><?=$batik['excerpt']?></p>
+                                        </div>
+                                        <div class="card-footer bg-white">
                                             <a href="<?= BASEURL ?>/dashboard/detail/<?= $batik['id_batik'] ?>"
                                                 class="btn btn-primary">Baca
                                                 Sekarang »</a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">Last updated <?=$batik['last_modified'];?></small>
                                         </div>
                                     </div>
                                     <?php endforeach ?>
