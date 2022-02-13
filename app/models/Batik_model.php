@@ -16,6 +16,13 @@ class Batik_model {
         $this->db->bind('status','1');
         return $this->db->resultSet();
     }
+    public function getCariDataBatik(){
+        $keyword = $_POST['keyword'];
+        $this->db->query("SELECT * FROM batik JOIN user USING(id_user) JOIN provinsi USING(provinsi_id) JOIN kabupaten_kota USING(kabupaten_kota_id) where batik.nama_batik LIKE :keyword or provinsi.nama_prov LIKE :keyword or kabupaten_kota.nama_kab LIKE :keyword or user.nama LIKE :keyword and batik.status=:status");
+        $this->db->bind('keyword',"%$keyword%");
+        $this->db->bind('status','1');
+        return $this->db->resultSet();
+    }
     public function getBatikById($id)
     {
         $this->db->query("SELECT * FROM batik JOIN user USING(id_user) JOIN provinsi USING(provinsi_id) JOIN kabupaten_kota USING(kabupaten_kota_id) WHERE id_batik=:id_batik");
