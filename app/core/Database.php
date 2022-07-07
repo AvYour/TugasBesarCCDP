@@ -4,13 +4,14 @@ class Database{
 		private $dbname = DB_NAME; // set the database name
 		private $dbuser = DB_USER; // set the mysql username
         private $dbpass = DB_PASS;  // set the mysql password
+        private $dbport = DB_PORT; //set the mysql port
 
         private $dbh;
         private $stmt;
 
         public function __construct()
         {
-            $dsn = "mysql:host=".$this->dbhost.";dbname=".$this->dbname."";
+            $dsn = "mysql:host=".$this->dbhost.";port=".$this->dbport.";dbname=".$this->dbname."";
 
             $option = [
                 PDO::ATTR_PERSISTENT => true,

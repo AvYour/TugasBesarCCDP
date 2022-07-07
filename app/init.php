@@ -5,4 +5,4 @@ require_once 'core/Database.php';
 require_once 'core/Flasher.php';
 require_once 'config/config.php';
 
-error_reporting(0);
+// error_reporting(0);
