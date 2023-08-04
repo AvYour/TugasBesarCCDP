@@ -29,6 +29,12 @@ class Batik_model {
         $this->db->bind('id_batik',$id);
         return $this->db->single();
     }
+    public function getBatikByUser($id)
+    {
+        $this->db->query("SELECT * FROM batik JOIN user USING(id_user) JOIN provinsi USING(provinsi_id) JOIN kabupaten_kota USING(kabupaten_kota_id) WHERE id_user=:id_user");
+        $this->db->bind('id_user',$id);
+        return $this->db->resultSet();
+    }
     public function getProvinsi(){
         $this->db->query("SELECT * FROM provinsi");
         $this->db->execute();

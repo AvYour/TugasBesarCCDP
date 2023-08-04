@@ -29,7 +29,12 @@ class Dashboard extends Controller
     {
         $data['judul'] = 'Batik';
         $data['user'] = $this->model('User_model')->getSingleUser($_SESSION['user_session']);
-        $data['batik'] = $this->model('Batik_model')->getAllBatik();
+        // var_dump($data['user']['hakAkses']);die;
+        if($data['user']['hakAkses']==='admin') {
+            $data['batik'] = $this->model('Batik_model')->getAllBatik();
+        } else {
+            $data['batik'] = $this->model('Batik_model')->getBatikByUser($data['user']['id_user']);
+        }
         $data['provinsi'] = $this->model('Batik_model')->getProvinsi();
         $this->view('templates/sidebar', $data);
         $this->view('dashboard/batik', $data);
