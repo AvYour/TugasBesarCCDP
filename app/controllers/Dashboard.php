@@ -7,7 +7,11 @@ class Dashboard extends Controller
         $data['user'] = $this->model('User_model')->getSingleUser($_SESSION['user_session']);
         $data['batik'] = $this->model('Batik_model')->getAllBatik();
         $data['sum_member'] = count($this->model('User_model')->getAllUser());
-        $data['sum_batik'] = count($this->model('Batik_model')->getAllBatik());
+        if($data['user']['hakAkses']==='admin') {
+            $data['sum_batik'] = count($this->model('Batik_model')->getAllBatik());
+        } else {
+            $data['sum_batik'] = count($this->model('Batik_model')->getBatikByUser($data['user']['id_user']));
+        }
         $data['temp'] = $this->model('Batik_model')->getPengajuanByUser($_SESSION['user_session']);
         $data['tambah'] = $this->model('Batik_model')->getPenambahanByUser($_SESSION['user_session']);
         $data['pengajuan'] = $this->model('Batik_model')->getPengajuan();
